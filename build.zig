@@ -20,7 +20,7 @@ pub fn build(b: *std.build.Builder) void {
     const serde_repo = GitRepoStep.create(b, .{
         .url = "git@github.com:regenerativep/zig-serde.git",
         .branch = "main",
-        .sha = "a83ed39fbfd74effdaaab465702cd077a6540c13",
+        .sha = "d0e38abab3ec37ec2c42554f430f05e84fb5b45a",
     });
     exe.step.dependOn(&serde_repo.step);
     exe.addPackagePath("serde", std.fs.path.join(b.allocator, &[_][]const u8{
